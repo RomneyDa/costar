@@ -23,7 +23,7 @@ interface ZodiacSelectorProps {
 function ZodiacSelector({ sign, setSign }: ZodiacSelectorProps) {
   return (
     <select
-      id="input-sun"
+      className="select-zodiac"
       value={sign}
       onChange={(e) => {
         setSign(e.target.value as Zodiac);
@@ -60,10 +60,11 @@ function App() {
   return (
     <div className="App">
       <div className="inputs">
-        <h2>Settings</h2>
-        <label>
-          Username:{" "}
+        <h2>WHAT IS THE EDICT OF THE STARS TODAY?</h2>
+        <label className="label-text">
+          Username:
           <input
+            className="input-text"
             type="text"
             value={username}
             onChange={(e) => {
@@ -72,9 +73,10 @@ function App() {
           />
         </label>
         <br />
-        <label>
-          Handle:{" "}
+        <label className="label-text">
+          Handle:
           <input
+            className="input-text"
             type="text"
             value={handle}
             onChange={(e) => {
@@ -83,24 +85,25 @@ function App() {
           />
         </label>
         <br />
-        <label>
+        <label className="label-zodiac">
           ☉:
           <ZodiacSelector sign={sun} setSign={setSun} />
         </label>
         <br />
-        <label>
+        <label className="label-zodiac">
           ↑:
           <ZodiacSelector sign={rising} setSign={setRising} />
         </label>
         <br />
-        <label>
+        <label className="label-zodiac">
           ☽:
           <ZodiacSelector sign={moon} setSign={setMoon} />
         </label>
         <br />
-        <label>
-          Title:{" "}
+        <label className="label-text">
+          Title:
           <input
+            className="input-text"
             type="text"
             value={title}
             onChange={(e) => {
@@ -109,13 +112,10 @@ function App() {
           />
         </label>
         <br />
-        <label>
-          Description:{" "}
+        <label className="label-textarea">
+          Description:
           <textarea
-            style={{
-              height: "100px",
-              width: "300px",
-            }}
+            className="input-textarea"
             value={description}
             onChange={(e) => {
               setDescription(e.target.value);
