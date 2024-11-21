@@ -47,9 +47,11 @@ function ZodiacSelector({ sign, setSign }: ZodiacSelectorProps) {
 function App() {
   const [username, setUsername] = useState("barbarator");
   const [handle, setHandle] = useState("barbarator");
-  const [title, setTitle] = useState("Text her right now: barbarator");
+  const [title, setTitle] = useState(
+    "A force stronger than gravity: barbarator."
+  );
   const [description, setDescription] = useState(
-    "If you text Barbara right now, she will stumble upon keys to happiness. Don't delay, text her and say hi!"
+    "If you're wondering why you can't stop thinking about barbarator, unfortunately there's nothing you can do about it. She's just so goddamn magnetic."
   );
   const [sun, setSun] = useState<Zodiac>("Aries");
   const [rising, setRising] = useState<Zodiac>("Aries");
